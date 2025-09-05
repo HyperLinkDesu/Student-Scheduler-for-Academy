@@ -1,9 +1,11 @@
 plugins {
-
+// Apply the Java plugin to add support for Java.
 id 'java'
 
+// Apply the Spring Boot plugin for creating a runnable fat JAR.
 id 'org.springframework.boot' version '3.2.0'
 
+// Apply the Spring Dependency Management plugin to manage dependency versions.
 id 'io.spring.dependency-management' version '1.1.4'
 
 }
@@ -16,18 +18,25 @@ sourceCompatibility = '17'
 }
 
 repositories {
-
+// Use Maven Central for resolving dependencies.
 mavenCentral()
 }
 
 dependencies {
-
+// Core Spring Boot web starter for building a web application with REST APIs.
 implementation 'org.springframework.boot:spring-boot-starter-web'
 
+// Spring Boot starter for using JPA (Java Persistence API) with Hibernate.
+// This is for database interaction.
 implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
+// An in-memory database for easy development and testing. You can replace this later.
 runtimeOnly 'com.h2database:h2'
 
+// MySQL Connector/J for connecting to a MySQL database.
+runtimeOnly 'com.mysql:mysql-connector-j'
+
+// Testing dependency for Spring Boot applications.
 testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 }
