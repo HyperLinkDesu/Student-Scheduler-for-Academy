@@ -15,6 +15,10 @@ public class Student {
     }
 
 
+    //EFFECTS: add book to the student
+    public void addBook(String newBook) {
+        this.listOfBook.add(newBook);
+    }
 
     //Getter
 
