@@ -20,6 +20,14 @@ public class Student {
         this.listOfBook.add(newBook);
     }
 
+    //EFFECTS: remove book from the student if student has
+    //         the book in the listOfBook, else do nothing
+    public void removeBook(String newBook) {
+        if (listOfBook.contains(newBook)) {
+            listOfBook.remove(newBook);
+        }
+    }
+
     //Getter
 
     //EFFECTS: get name of the student
