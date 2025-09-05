@@ -3,7 +3,7 @@ plugins {
 id 'java'
 
 // Apply the Spring Boot plugin for creating a runnable fat JAR.
-id 'org.springframework.boot' version '3.2.0'
+id 'org.springframework.boot' version '3.5.5'
 
 // Apply the Spring Dependency Management plugin to manage dependency versions.
 id 'io.spring.dependency-management' version '1.1.4'
