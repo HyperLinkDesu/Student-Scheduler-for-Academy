@@ -7,3 +7,5 @@ Willy Park: parkw0928@gmail.com
 Junmo Koo: junmo.koo0@gmail.com
 
 Seungmin Lee: yeesmn@gmail.com
+
+Chanwoo(Matthew) Jeon: jeonchanwoo05@gmail.com
