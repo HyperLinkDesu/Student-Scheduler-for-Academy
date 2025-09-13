@@ -5,19 +5,25 @@ import java.util.ArrayList;
 
 public class Student {
     private String name;
-    private List<String> listOfBook;
+    private int numOfBook;
 
 
     //Constructor
     public Student(String name) {
         this.name = name;
-        this.listOfBook = new ArrayList<>();
+        this.numOfBook = 0;
     }
 
 
     //EFFECTS: add book to the student
-    public void addBook(String newBook) {
-        this.listOfBook.add(newBook);
+    public void addBook() {
+        numOfBook++;
+    }
+
+    public void removeBook() {
+        if (numOfBook != 0) {
+            numOfBook--;
+        }
     }
 
     //Getter
@@ -28,7 +34,7 @@ public class Student {
     }
 
     //EFFECTS: get list of books
-    public List<String> getListOfBook() {
-        return listOfBook;
+    public int getNumOfBook() {
+        return numOfBook;
     }
 }

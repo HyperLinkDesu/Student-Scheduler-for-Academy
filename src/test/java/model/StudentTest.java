@@ -11,28 +11,36 @@ import java.util.ArrayList;
 
 public class StudentTest {
     private Student testStudent;
-    private List<String> testListOfBook;
 
     @BeforeEach
     void runBefore() {
         testStudent = new Student("testStudent");
-        testListOfBook = new ArrayList<>();
 
     }
 
     @Test
     void testConstructor() {
         assertEquals("testStudent", testStudent.getName());
-        assertEquals(testListOfBook, testStudent.getListOfBook());
+        assertEquals(0, testStudent.getNumOfBook());
     }
 
     @Test
     void testAddBook() {
-        assertEquals(0, testStudent.getListOfBook().size());
-        testStudent.addBook("newBook1");
-        assertEquals(1, testStudent.getListOfBook().size());
-        testStudent.addBook("newBook2");
-        assertEquals(2, testStudent.getListOfBook().size());
+        assertEquals(0, testStudent.getNumOfBook());
+        testStudent.addBook();
+        assertEquals(1, testStudent.getNumOfBook());
+        testStudent.addBook();
+        assertEquals(2, testStudent.getNumOfBook());
+
+    }
+
+    @Test
+    void testRemoveBook() {
+        assertEquals(0, testStudent.getNumOfBook());
+        testStudent.addBook();
+        assertEquals(1, testStudent.getNumOfBook());
+        testStudent.removeBook();
+        assertEquals(0, testStudent.getNumOfBook());
 
     }
 }
